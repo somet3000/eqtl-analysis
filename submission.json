@@ -1,0 +1,4 @@
+{
+    "dockerhub-id": "somet3000/eqtl_analysis:latest",
+    "build-script": "python run.py build"
+}
