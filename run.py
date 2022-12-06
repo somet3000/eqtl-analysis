@@ -2,6 +2,7 @@
 
 import sys
 import json
+import os
 
 def main(targets=['test']):
     
@@ -11,8 +12,20 @@ def main(targets=['test']):
         print('reached data target')
         
     if 'test' in targets:
-        # TODO: implement test target
-        print('reached test target')
+        
+        print('running test target!')
+        
+        print('running plink preprocessing!')
+        os.system('bash src/features/run_plink_test.sh')
+        
+        print('making eqtl matrices!')
+        os.system('Rscript src/features/create_genotype_matrix_test.R')
+        os.system('Rscript src/features/create_expression_matrix_test.R')
+        
+        print('running mock analysis using matrix eqtl!')
+        os.system('Rscript src/models/population_model_test.R')
+        
+        print('output pdf available in home code directory!')
 
 if __name__ == '__main__':
     targets = sys.argv[1:]
