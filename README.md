@@ -7,7 +7,7 @@ The VCF data can be found from the 1000 Genomes NCBI database: https://ftp-trace
 
 The gene expression data can be found from this Zenodo link: https://zenodo.org/record/6998955
 
-The code in this repository will run the initial at-scale analysis and return the QQ-plot as a PDF file in the repository directory. All further analyses to generate figures for the report were created from different flavors of this analysis, using information like population metadata. This code can be accessed in vignette form by looking through the analysis notebook. 
+The code in this repository will run the initial at-scale analysis and return the QQ-plot as a PDF file in the repository directory. All further analyses to generate figures for the report were created from different flavors of this analysis, using information like population metadata. This code can be accessed in vignette form by looking through the analysis notebook. Genome browser plots can be produced via LocusZoom.
 
 The analysis is slightly different when running at-scale, which is the reason why there are separate scripts for testing on a smaller subset!
 
