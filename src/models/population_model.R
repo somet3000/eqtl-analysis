@@ -46,3 +46,7 @@ me = Matrix_eQTL_main(
     min.pv.by.genesnp = FALSE,
     noFDRsaveMemory = FALSE
 )
+
+pdf('output_qqplot.pdf')
+plot(me)
+dev.off()
