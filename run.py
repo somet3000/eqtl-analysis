@@ -6,8 +6,8 @@ import json
 def main(targets=['test']):
     
     # implement data target (get data)
-    if 'data' in targets:
-        # TODO: load data
+    if 'all' in targets:
+        
         print('reached data target')
         
     if 'test' in targets:
