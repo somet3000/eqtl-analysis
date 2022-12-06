@@ -9,7 +9,20 @@ def main(targets=['test']):
     # implement data target (get data)
     if 'all' in targets:
         
-        print('reached data target')
+        print('running main target!')
+        
+        print('running plink preprocessing!')
+        os.system('bash src/features/run_plink.sh')
+        
+        print('making eqtl matrices!')
+        os.system('Rscript src/features/create_genotype_matrix.R')
+        os.system('Rscript src/features/create_expression_matrix.R')
+        os.system('Rscript src/features/create_gene_and_snp_info.R')
+        
+        print('running analysis using matrix eQTL!')
+        os.system('Rscript src/models/population_model.R')
+        
+        print('output pdf available in home code directory!')
         
     if 'test' in targets:
         

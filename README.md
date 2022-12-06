@@ -11,5 +11,5 @@ The code in this repository will run the initial at-scale analysis and return th
 
 The analysis is slightly different when running at-scale, which is the reason why there are separate scripts for testing on a smaller subset! 
 
-Performing a population-specifc eQTL analysis would benefit from more RAM!
+Performing a population-specifc eQTL analysis would benefit from more RAM! Data can be obtained from the 1000 Genomes Project.
 
