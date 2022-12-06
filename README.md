@@ -13,3 +13,4 @@ The analysis is slightly different when running at-scale, which is the reason wh
 
 Performing a population-specifc eQTL analysis would benefit from more RAM! Data can be obtained from the 1000 Genomes Project.
 
+Uses both the plink (https://www.cog-genomics.org/plink/1.9/input) and Matrix eQTL (http://www.bios.unc.edu/research/genomic_software/Matrix_eQTL/) packages. Check them out!
