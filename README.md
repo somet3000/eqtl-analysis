@@ -14,3 +14,15 @@ The analysis is slightly different when running at-scale, which is the reason wh
 Performing a population-specifc eQTL analysis would benefit from more RAM! Data can be obtained from the 1000 Genomes Project.
 
 Uses both the plink (https://www.cog-genomics.org/plink/1.9/input) and Matrix eQTL (http://www.bios.unc.edu/research/genomic_software/Matrix_eQTL/) packages. Check them out!
+
+## File Structure
+
+```src/features/run_plink.sh``` runs the plink package to preprocess the VCF file before creating a SNP matrix. The ```src/features/run_plink_test.sh``` script does this for the mock VCF file. 
+
+```src/features/create_expression_matrix.R``` creates the RNA-sequencing matrix in the format required for the matrix eQTL package. The ```src/features/create_expression_matrix_test.R```  version does this on a smaller mock RNA-seq matrix.
+
+```src/features/create_genotype_matrix.R``` creates the SNP-matrix in the format required for the matrix eQTL package. The ```src/features/create_genotype_matrix_test.R``` version does this on a smaller mock SNP dataset.
+
+```src/features/create_gene_and_snp_info.R``` file creates SNP and gene coordinate information which can be used for eQTL filtering when running an at-scale analysis. These features would not be compatible on the smaller mock dataset, which is why there are separate scripts for testing and at-scale analysis. 
+
+Thanks for checking out this repo! :)
